@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Datos</h1>
+        <table class="table" id="datos">
+            <thead class="thead-dark">
+                <tr>
+                    <th> Id</th>
+                    <th> Nombre</th>
+                    <th> Direccion</th>
+                    <th> Tipo</th>
+                </tr>
+            </thead>
+            <tbody id="registros"></tbody>
+        </table>
+
+        <button class="btn btn-warning" id="cargar">cargar datos</button>
+    </div>
+
+    <script>
+        let datos = [{
+            id: 01, nombre: "Juan", direccion: "Ahuachapan",
+            tipoPersona: { codigo: 01, tipo: "Mala" }
+        },
+        {
+            id: 02, nombre: "Maria", direccion: "Tacuba",
+            tipoPersona: { codigo: 02, tipo: "Buena" }
+        },
+        {
+            id: 03, nombre: "Elmer", direccion: "Turin",
+            tipoPersona: { codigo: 02, tipo: "Buena" }
+        }];
+
+        $(document).ready(function () {
+            $("#cargar").click(carga);
+            });
+            function carga() {
+                datos.forEach(i => {
+                    $("#registros").append(""
+                        + "<tr>"
+                        + "<td>"+ i.id + "</td>"
+                        +"<td>" + i.nombre + "</td>"
+                        +"<td>" + i.direccion + "</td>" 
+                        +"<td>" + i.tipoPersona.tipo + "</td>" 
+                        +"</tr>");
+            });
+        }        
+        
+    </script>
+</body>
+
+</html>

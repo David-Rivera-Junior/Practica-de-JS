@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        n1: <input type="number" id="v1"></br>
+        n2: <input type="number" id="v2"></br>
+        <button id="sumar">Sumar</button>
+         <!--Para JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        $("#sumar").click(function(){
+            let n1=parseFloat($("#v1").val());
+            let n2=parseFloat($("#v2").val());
+
+            alert("total: "+(v1+v2));
+        });
+
+    });
+    
+    </script>
+
+
+    </body>
+</html>

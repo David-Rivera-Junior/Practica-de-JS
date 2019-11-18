@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+    <!--Forma 1-->//////////////////////////////////////////////////////////////////////////////////////////////////
+    <h1 onclick="f">Hola</h1>
+
+    <!--Forma 2-->/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    <script>
+        var n;
+        n = 50;
+        alert("el valor:+n")
+        if (n < 50) {
+            alert("Soy menor a 50");
+        }
+
+        //Declaracion//////////////////////////////////////////////////////////////////////////////////////
+        function prueba(parm1) {
+            alert("Soy una funcion..." + parm1);
+        }
+
+        //Llamada o Implementacion//////////////////////////////////////////////////////////////////////////////////////////////////
+        prueba(100);
+        prueba(400);
+
+        //Estructura de datos//////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Arreglos
+        let v = [3, 4, 5];
+        alert("Arreglos dato en posision 2: " + v[1]);
+        alert("tamaño del arreglo: " + v.length);
+
+        //Funciones Anonimas//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        var f = function () {
+            alert("Hola");
+        };
+        f();
+
+        //JSON//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //  var json={
+        //  nombre: "jose",
+        //  edad: 20,
+        // direccion: "La chancla del diablo",
+        // hablar: function () {
+        //     alert("Estoy Hablando...");
+        // }
+        // };
+        //amigos:["Matias","Fernanada","Mauricio"]
+
+        // alert("Persona: "+ json.nombre+" amigo de:"+ json.amigo[2]);
+        // json.hablar();
+
+        // var clientes=[
+        // {nombre:"jose",edad:19,contactos:[22222154,215124545]},
+        // {nombre:"Matias",edad:20,contactos:[22222154,215124545]},
+        // {nombre:"Julieta",edad:17,contactos:[22222154,215124545]},
+        // ]
+        // alert("nombre: "+clientes[2].nombre+" edad: "+clientes[2].edad);
+
+        //Ejercicio Realizacion en JSON para ventas//////////////////////////////////////////////////////////////////////////////////////////////////
+
+        var ventas = [{
+            Cliente: { Codgio: 01, Nombre: "Juan", Edad: 21 }, fecha: "2019/10/20",
+            detalle: [{ Cantidad: 2, Producto: "Manzana", Precio: 0.50, total: 1.00 },
+            { Cantidad: 3, Producto: "Pera", Precio: 0.25, total: 0.75 },
+            { Cantidad: 2, Producto: "Fresas", Precio: 0.30, total: 2.75 }]},
+        ]
+        alert("cliente " + ventas[0].Cliente.Nombre + " compró una " + ventas[0].detalle[1].Producto)
+
+
+
+
+
+
+
+
+    </script>
+
+    <!--Forma 3-->
+    <!-- <script src="script.js"></script>
+    <script src="js/script2.js"> </script>-->
+</head>
+
+</html>
